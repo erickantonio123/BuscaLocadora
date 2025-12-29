@@ -7,11 +7,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
 import java.util.List;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 
 @Entity
+@JsonIgnoreProperties("filmes")
 public class Genero{
 
  @Id

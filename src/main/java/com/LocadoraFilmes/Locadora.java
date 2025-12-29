@@ -8,8 +8,9 @@
     import jakarta.persistence.ManyToOne;
     import jakarta.validation.constraints.NotBlank;
     import jakarta.validation.constraints.Size;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
     @Entity
+    
     public class Locadora {
 
         @Id
@@ -24,10 +25,12 @@
 
     @ManyToOne
         @JoinColumn(name = "genero_id")
+        @JsonIgnoreProperties("filmes")
         private Genero genero;
 
 @ManyToOne
 @JoinColumn(name = "plataforma_id")
+@JsonIgnoreProperties("filmes")
 private Plataforma plataforma;
 
 

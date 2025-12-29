@@ -9,9 +9,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 import java.util.Objects;
 @Entity
+@JsonIgnoreProperties("filmes")
 public class Plataforma {
     
  @Id
